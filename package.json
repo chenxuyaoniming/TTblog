@@ -1,0 +1,23 @@
+{
+  "name": "ttblog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenxuyaoniming/TTblog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chenxuyaoniming/TTblog/issues"
+  },
+  "homepage": "https://github.com/chenxuyaoniming/TTblog#readme",
+  "devDependencies": {
+    "vuepress": "^1.7.1"
+  }
+}
