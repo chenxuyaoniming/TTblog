@@ -19,5 +19,8 @@
   "homepage": "https://github.com/chenxuyaoniming/TTblog#readme",
   "devDependencies": {
     "vuepress": "^1.7.1"
+  },
+  "dependencies": {
+    "vuepress-plugin-demo-block": "^0.7.2"
   }
 }
