@@ -28,14 +28,14 @@ module.exports = {
         sidebar: [
             '/',
             {
-                title: 'http知识点',
+                title: 'HTTP',
                 path: '/http',
                 children: [
                     '/http/'
                 ]
             },
             {
-                title: 'css知识点',
+                title: 'CSS',
                 path: '/css',
                 children: [
                     '/css/',
@@ -43,14 +43,14 @@ module.exports = {
                 ]
             },
             {
-                title: 'js知识点',
+                title: 'JS',
                 path: '/js',
                 children: [
                     '/js/'
                 ]
             },
             {
-                title: 'react知识点',
+                title: 'React',
                 path: '/react',
                 children: [
                     '/react/',
@@ -58,21 +58,21 @@ module.exports = {
                 ]
             },
             {
-                title: 'vue知识点',
+                title: 'Vue',
                 path: '/vue',
                 children: [
                     '/vue/'
                 ]
             },
             {
-                title: 'webpack',
+                title: 'Webpack',
                 path: '/webpack',
                 children: [
                     '/webpack/'
                 ]
             },
             {
-                title: 'typescript',
+                title: 'TypeScript',
                 path: '/ts',
                 children: [
                     '/ts/'
