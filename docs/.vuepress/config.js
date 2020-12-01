@@ -46,7 +46,9 @@ module.exports = {
                 title: 'JS',
                 path: '/js',
                 children: [
-                    '/js/'
+                    '/js/',
+                    '/js/array',
+                    '/js/prototype'
                 ]
             },
             {
@@ -54,14 +56,16 @@ module.exports = {
                 path: '/react',
                 children: [
                     '/react/',
-                    '/react/vdom'
+                    '/react/vdom',
+                    '/react/router'
                 ]
             },
             {
                 title: 'Vue',
                 path: '/vue',
                 children: [
-                    '/vue/'
+                    '/vue/',
+                    '/vue/composition'
                 ]
             },
             {
