@@ -61,7 +61,9 @@ module.exports = {
                     '/react/',
                     '/react/vdom',
                     '/react/router',
-                    '/react/setState'
+                    '/react/setState',
+                    '/react/getDrived',
+                    '/react/optimise'
                 ]
             },
             {
@@ -69,7 +71,8 @@ module.exports = {
                 path: '/vue',
                 children: [
                     '/vue/',
-                    '/vue/composition'
+                    '/vue/composition',
+                    '/defineProperty'
                 ]
             },
             {
