@@ -31,7 +31,9 @@ module.exports = {
                 title: 'HTTP',
                 path: '/http',
                 children: [
-                    '/http/'
+                    '/http/',
+                    '/http/http',
+                    '/http/enterUrl'
                 ]
             },
             {
