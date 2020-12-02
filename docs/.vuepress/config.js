@@ -50,7 +50,8 @@ module.exports = {
                 children: [
                     '/js/',
                     '/js/array',
-                    '/js/prototype'
+                    '/js/prototype',
+                    '/js/promise'
                 ]
             },
             {
@@ -59,7 +60,8 @@ module.exports = {
                 children: [
                     '/react/',
                     '/react/vdom',
-                    '/react/router'
+                    '/react/router',
+                    '/react/setState'
                 ]
             },
             {
