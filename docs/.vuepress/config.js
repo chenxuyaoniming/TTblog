@@ -63,7 +63,7 @@ module.exports = {
                     '/react/router',
                     '/react/setState',
                     '/react/getDrived',
-                    '/react/optimise'
+                    '/react/optimize'
                 ]
             },
             {
@@ -72,7 +72,7 @@ module.exports = {
                 children: [
                     '/vue/',
                     '/vue/composition',
-                    '/defineProperty'
+                    '/vue/defineProperty'
                 ]
             },
             {
