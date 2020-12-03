@@ -73,7 +73,7 @@ module.exports = {
                 children: [
                     '/vue/',
                     '/vue/composition',
-                    '/defineProperty'
+                    '/vue/defineProperty'
                 ]
             },
             {

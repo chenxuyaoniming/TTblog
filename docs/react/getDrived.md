@@ -1,4 +1,4 @@
-### getDerivedStateFromProps && getSnapshotBeforeUpdate
+### getDerivedStateFromProps & getSnapshotBeforeUpdate
 
 #### getDerivedStateFromProps
 <font color="red">getDerivedStateFromProps</font>: 在组件初始化和更新后执行，用于获取最新的props和state，因为是个静态方法，所以无法获取this，避免开发者在其内部写过多业务，需要返回一个对象式的值，用于更新state。因此16.3去除了componentWillReceiveProps,
