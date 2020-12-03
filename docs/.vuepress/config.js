@@ -51,7 +51,8 @@ module.exports = {
                     '/js/',
                     '/js/array',
                     '/js/prototype',
-                    '/js/promise'
+                    '/js/promise',
+                    '/js/designModal'
                 ]
             },
             {
