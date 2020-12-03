@@ -63,7 +63,8 @@ module.exports = {
                     '/react/router',
                     '/react/setState',
                     '/react/getDrived',
-                    '/react/optimise'
+                    '/react/optimize',
+                    '/react/stack&fiber'
                 ]
             },
             {
