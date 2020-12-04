@@ -33,7 +33,8 @@ module.exports = {
                 children: [
                     '/http/',
                     '/http/http',
-                    '/http/enterUrl'
+                    '/http/enterUrl',
+                    '/http/status'
                 ]
             },
             {
@@ -41,7 +42,8 @@ module.exports = {
                 path: '/css',
                 children: [
                     '/css/',
-                    '/css/bfc'
+                    '/css/bfc',
+                    '/css/flex'
                 ]
             },
             {
