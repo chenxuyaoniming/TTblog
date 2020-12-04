@@ -90,7 +90,8 @@ module.exports = {
                 title: 'TypeScript',
                 path: '/ts',
                 children: [
-                    '/ts/'
+                    '/ts/',
+                    '/ts/generic'
                 ]
             }
         ]
