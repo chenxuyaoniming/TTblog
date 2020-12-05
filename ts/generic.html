@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>泛型 | TTblog</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <script src="https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js"></script>
+    <meta name="description" content="努力！奋斗！">
+    
+    <link rel="preload" href="/CCblog/assets/css/0.styles.44c529a9.css" as="style"><link rel="preload" href="/CCblog/assets/js/app.860d8657.js" as="script"><link rel="preload" href="/CCblog/assets/js/2.192a28f1.js" as="script"><link rel="preload" href="/CCblog/assets/js/32.fbd454d8.js" as="script"><link rel="prefetch" href="/CCblog/assets/js/10.f4592cfd.js"><link rel="prefetch" href="/CCblog/assets/js/11.f3cd4bd5.js"><link rel="prefetch" href="/CCblog/assets/js/12.4430f43c.js"><link rel="prefetch" href="/CCblog/assets/js/13.65615d70.js"><link rel="prefetch" href="/CCblog/assets/js/14.69fd22b3.js"><link rel="prefetch" href="/CCblog/assets/js/15.cc4e5498.js"><link rel="prefetch" href="/CCblog/assets/js/16.2c78764d.js"><link rel="prefetch" href="/CCblog/assets/js/17.a9a3f30b.js"><link rel="prefetch" href="/CCblog/assets/js/18.fc62dd5f.js"><link rel="prefetch" href="/CCblog/assets/js/19.57688039.js"><link rel="prefetch" href="/CCblog/assets/js/20.9e50bbb4.js"><link rel="prefetch" href="/CCblog/assets/js/21.95e351b9.js"><link rel="prefetch" href="/CCblog/assets/js/22.5656717b.js"><link rel="prefetch" href="/CCblog/assets/js/23.32fc433c.js"><link rel="prefetch" href="/CCblog/assets/js/24.999861bd.js"><link rel="prefetch" href="/CCblog/assets/js/25.2d3ea345.js"><link rel="prefetch" href="/CCblog/assets/js/26.3bf670f2.js"><link rel="prefetch" href="/CCblog/assets/js/27.284f9e9b.js"><link rel="prefetch" href="/CCblog/assets/js/28.142e3b90.js"><link rel="prefetch" href="/CCblog/assets/js/29.631f43c5.js"><link rel="prefetch" href="/CCblog/assets/js/3.8473ddb1.js"><link rel="prefetch" href="/CCblog/assets/js/30.da36890d.js"><link rel="prefetch" href="/CCblog/assets/js/31.9c521b72.js"><link rel="prefetch" href="/CCblog/assets/js/33.71913a17.js"><link rel="prefetch" href="/CCblog/assets/js/34.02c70a11.js"><link rel="prefetch" href="/CCblog/assets/js/35.8015ee45.js"><link rel="prefetch" href="/CCblog/assets/js/36.3b466399.js"><link rel="prefetch" href="/CCblog/assets/js/37.4a999360.js"><link rel="prefetch" href="/CCblog/assets/js/4.0235f4a4.js"><link rel="prefetch" href="/CCblog/assets/js/5.cc893d32.js"><link rel="prefetch" href="/CCblog/assets/js/6.063fcb7e.js"><link rel="prefetch" href="/CCblog/assets/js/7.53121658.js"><link rel="prefetch" href="/CCblog/assets/js/8.561f5ee3.js"><link rel="prefetch" href="/CCblog/assets/js/9.a4560938.js">
+    <link rel="stylesheet" href="/CCblog/assets/css/0.styles.44c529a9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/CCblog/" class="home-link router-link-active"><!----> <span class="site-name">TTblog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/CCblog/aboutMe.html" class="nav-link">
+  个人介绍
+</a></div><div class="nav-item"><a href="/CCblog/ts/teach.html" class="nav-link">
+  学习
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/CCblog/aboutMe.html" class="nav-link">
+  个人介绍
+</a></div><div class="nav-item"><a href="/CCblog/ts/teach.html" class="nav-link">
+  学习
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/CCblog/" aria-current="page" class="sidebar-link">More see More think More money</a></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/http" class="sidebar-heading clickable"><span>HTTP</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/css" class="sidebar-heading clickable"><span>CSS</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/js" class="sidebar-heading clickable"><span>JS</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/react" class="sidebar-heading clickable"><span>React</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/vue" class="sidebar-heading clickable"><span>Vue</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/webpack" class="sidebar-heading clickable"><span>Webpack</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/ts" class="sidebar-heading clickable router-link-active open"><span>TypeScript</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/CCblog/ts/" aria-current="page" class="sidebar-link">ts</a></li><li><a href="/CCblog/ts/generic.html" aria-current="page" class="active sidebar-link">泛型</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="泛型"><a href="#泛型" class="header-anchor">#</a> 泛型</h3> <p>泛型是用来规范一个函数的返回值与其传入参数之间的类型关系，保证了函数的返回值类型是可预测的</p> <div class="language-ts extra-class"><pre class="language-ts"><code>    <span class="token comment">// 无法预测,返回值可能是any，任何类型</span>
+    <span class="token keyword">function</span> <span class="token function">identity</span><span class="token punctuation">(</span>arg<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">any</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> arg<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 可预测</span>
+    <span class="token keyword">function</span> <span class="token generic-function"><span class="token function">identity</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>arg<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">)</span><span class="token operator">:</span><span class="token constant">T</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> arg<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 返回的是一个T类型的数组合集</span>
+    <span class="token keyword">function</span> <span class="token generic-function"><span class="token function">identity</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>arg<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">:</span><span class="token constant">T</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> arg<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre></div><p>我们给identity添加了类型变量T。 T帮助我们捕获用户传入的类型（比如：number），之后我们就可以使用这个类型。 之后我们再次使用了 T当做返回值类型。现在我们可以知道参数类型与返回值类型是相同的了。 这允许我们跟踪函数里使用的类型的信息。</p> <h3 id="泛型类型"><a href="#泛型类型" class="header-anchor">#</a> 泛型类型</h3> <ul><li>泛型函数类型</li></ul> <div class="language-ts extra-class"><pre class="language-ts"><code>    <span class="token keyword">function</span> <span class="token generic-function"><span class="token function">identity</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>arg<span class="token operator">:</span><span class="token constant">T</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token constant">T</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> arg<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">let</span> myIdentity<span class="token operator">:</span> <span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>arg<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token constant">T</span> <span class="token operator">=</span> identity<span class="token punctuation">;</span>
+
+    <span class="token comment">//or let myIdentity: {&lt;T&gt;(arg: T): T} = identity;</span>
+
+    <span class="token comment">// 与一般的泛型类型一致，只是有一个类型参数在最前面，像函数声明一样</span>
+    <span class="token comment">// 泛型函数接口</span>
+    <span class="token keyword">interface</span> <span class="token class-name">GenericFn</span> <span class="token punctuation">{</span>
+        <span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>arg<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    myIdentity<span class="token operator">:</span> GenericFn <span class="token operator">=</span> identity<span class="token punctuation">;</span>
+
+
+    <span class="token comment">// 将泛型类型传入接口，直接指定泛型类型</span>
+    <span class="token keyword">interface</span> <span class="token class-name">GenericFnProps<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span> <span class="token punctuation">{</span>
+        <span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>arg<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">)</span>： <span class="token constant">T</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">let</span> myIdentity<span class="token operator">:</span> GenericFnProps<span class="token operator">&lt;</span><span class="token builtin">string</span><span class="token operator">&gt;</span> <span class="token operator">=</span> identity<span class="token punctuation">;</span>
+</code></pre></div><h3 id="泛型类"><a href="#泛型类" class="header-anchor">#</a> 泛型类</h3> <div class="language-ts extra-class"><pre class="language-ts"><code>    <span class="token comment">// 泛型类只是把普通类的类名后面增加&lt;T&gt;</span>
+    <span class="token keyword">class</span> <span class="token class-name">Generic<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span> <span class="token punctuation">{</span>
+        count<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">;</span>
+        <span class="token function-variable function">getAdd</span><span class="token operator">:</span> <span class="token punctuation">(</span>arg<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token constant">T</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre></div><h3 id="泛型约束"><a href="#泛型约束" class="header-anchor">#</a> 泛型约束</h3> <p>当我们给泛型extends一个接口时，就相当于给了泛型值的一个约束，不再适用于任意类型</p> <div class="language-ts extra-class"><pre class="language-ts"><code>    <span class="token keyword">interface</span> <span class="token class-name">Length</span> <span class="token punctuation">{</span>
+        length<span class="token operator">:</span> <span class="token builtin">number</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">function</span> <span class="token generic-function"><span class="token function">identity</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span> <span class="token keyword">extends</span> Length<span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>arg<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token constant">T</span> <span class="token punctuation">{</span>
+        <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arg<span class="token punctuation">.</span>length<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">identity</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token comment">// error T类型已被约束必须由length属性，所以会报错</span>
+    <span class="token function">identity</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">// 3</span>
+</code></pre></div><p>当我们给定多个参数，让它们之间进行约束</p> <div class="language-ts extra-class"><pre class="language-ts"><code>    <span class="token keyword">function</span> <span class="token function">getValue</span><span class="token punctuation">(</span>obj<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">,</span> key<span class="token operator">:</span> <span class="token constant">U</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>a<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> b<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token function">getValue</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> <span class="token string">'a'</span><span class="token punctuation">)</span> <span class="token comment">// 1</span>
+    <span class="token function">getValue</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> <span class="token string">'d'</span><span class="token punctuation">)</span> <span class="token comment">// error key的类型被obj约束</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/CCblog/ts/" class="prev router-link-active">
+        ts
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/CCblog/assets/js/app.860d8657.js" defer></script><script src="/CCblog/assets/js/2.192a28f1.js" defer></script><script src="/CCblog/assets/js/32.fbd454d8.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>输入URL到页面渲染的过程 | TTblog</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <script src="https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js"></script>
+    <meta name="description" content="努力！奋斗！">
+    
+    <link rel="preload" href="/CCblog/assets/css/0.styles.44c529a9.css" as="style"><link rel="preload" href="/CCblog/assets/js/app.860d8657.js" as="script"><link rel="preload" href="/CCblog/assets/js/2.192a28f1.js" as="script"><link rel="preload" href="/CCblog/assets/js/7.53121658.js" as="script"><link rel="prefetch" href="/CCblog/assets/js/10.f4592cfd.js"><link rel="prefetch" href="/CCblog/assets/js/11.f3cd4bd5.js"><link rel="prefetch" href="/CCblog/assets/js/12.4430f43c.js"><link rel="prefetch" href="/CCblog/assets/js/13.65615d70.js"><link rel="prefetch" href="/CCblog/assets/js/14.69fd22b3.js"><link rel="prefetch" href="/CCblog/assets/js/15.cc4e5498.js"><link rel="prefetch" href="/CCblog/assets/js/16.2c78764d.js"><link rel="prefetch" href="/CCblog/assets/js/17.a9a3f30b.js"><link rel="prefetch" href="/CCblog/assets/js/18.fc62dd5f.js"><link rel="prefetch" href="/CCblog/assets/js/19.57688039.js"><link rel="prefetch" href="/CCblog/assets/js/20.9e50bbb4.js"><link rel="prefetch" href="/CCblog/assets/js/21.95e351b9.js"><link rel="prefetch" href="/CCblog/assets/js/22.5656717b.js"><link rel="prefetch" href="/CCblog/assets/js/23.32fc433c.js"><link rel="prefetch" href="/CCblog/assets/js/24.999861bd.js"><link rel="prefetch" href="/CCblog/assets/js/25.2d3ea345.js"><link rel="prefetch" href="/CCblog/assets/js/26.3bf670f2.js"><link rel="prefetch" href="/CCblog/assets/js/27.284f9e9b.js"><link rel="prefetch" href="/CCblog/assets/js/28.142e3b90.js"><link rel="prefetch" href="/CCblog/assets/js/29.631f43c5.js"><link rel="prefetch" href="/CCblog/assets/js/3.8473ddb1.js"><link rel="prefetch" href="/CCblog/assets/js/30.da36890d.js"><link rel="prefetch" href="/CCblog/assets/js/31.9c521b72.js"><link rel="prefetch" href="/CCblog/assets/js/32.fbd454d8.js"><link rel="prefetch" href="/CCblog/assets/js/33.71913a17.js"><link rel="prefetch" href="/CCblog/assets/js/34.02c70a11.js"><link rel="prefetch" href="/CCblog/assets/js/35.8015ee45.js"><link rel="prefetch" href="/CCblog/assets/js/36.3b466399.js"><link rel="prefetch" href="/CCblog/assets/js/37.4a999360.js"><link rel="prefetch" href="/CCblog/assets/js/4.0235f4a4.js"><link rel="prefetch" href="/CCblog/assets/js/5.cc893d32.js"><link rel="prefetch" href="/CCblog/assets/js/6.063fcb7e.js"><link rel="prefetch" href="/CCblog/assets/js/8.561f5ee3.js"><link rel="prefetch" href="/CCblog/assets/js/9.a4560938.js">
+    <link rel="stylesheet" href="/CCblog/assets/css/0.styles.44c529a9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/CCblog/" class="home-link router-link-active"><!----> <span class="site-name">TTblog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/CCblog/aboutMe.html" class="nav-link">
+  个人介绍
+</a></div><div class="nav-item"><a href="/CCblog/http/teach.html" class="nav-link">
+  学习
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/CCblog/aboutMe.html" class="nav-link">
+  个人介绍
+</a></div><div class="nav-item"><a href="/CCblog/http/teach.html" class="nav-link">
+  学习
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/CCblog/" aria-current="page" class="sidebar-link">More see More think More money</a></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/http" class="sidebar-heading clickable router-link-active open"><span>HTTP</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/CCblog/http/" aria-current="page" class="sidebar-link">http</a></li><li><a href="/CCblog/http/http.html" class="sidebar-link">http解析</a></li><li><a href="/CCblog/http/enterUrl.html" aria-current="page" class="active sidebar-link">输入URL到页面渲染的过程</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/CCblog/http/status.html" class="sidebar-link">http状态码</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/css" class="sidebar-heading clickable"><span>CSS</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/js" class="sidebar-heading clickable"><span>JS</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/react" class="sidebar-heading clickable"><span>React</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/vue" class="sidebar-heading clickable"><span>Vue</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/webpack" class="sidebar-heading clickable"><span>Webpack</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/ts" class="sidebar-heading clickable"><span>TypeScript</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="输入url到页面渲染的过程"><a href="#输入url到页面渲染的过程" class="header-anchor">#</a> 输入URL到页面渲染的过程</h3> <ol><li>浏览器解析IP地址</li> <li>根据IP地址建立tcp连接</li> <li>发起http请求</li> <li>服务端收到请求，浏览器接受响应</li> <li>tcp连接关闭</li> <li>浏览器解析资源渲染页面</li></ol> <h4 id="浏览器解析ip地址"><a href="#浏览器解析ip地址" class="header-anchor">#</a> 浏览器解析IP地址</h4> <p>浏览器拿到url后，会将url解析为IP地址，首先会查本地缓存，如果存在相应的缓存，取之，之后会请求上级dns服务器，拿到ip地址（如果找不到，会一直查到dns服务器根节点）</p> <h3 id="建立tcp连接"><a href="#建立tcp连接" class="header-anchor">#</a> 建立tcp连接</h3> <p>浏览器客户端会和服务端进行三次握手，由客户端发起 syn -&gt; syn/ack -&gt; ack，建立tcp连接后进行数据响应</p> <p><img src="/CCblog/assets/img/threehand.01adf44b.jpg" alt="threehand"></p> <h3 id="发起http请求"><a href="#发起http请求" class="header-anchor">#</a> 发起http请求</h3> <p>tcp连接建立后，浏览器向服务器发起http请求，http请求包含请求起始行，请求头，请求体。服务器接收到请求后，会返回一个response对象，包含了状态码，响应头，响应报文</p> <div class="language- extra-class"><pre><code>//General
+Request Url: 服务器地址
+Request Method: 请求方式（get, post, options, put, head, delete, connect, trace）
+Status Code: 请求返回的状态码
+Remote Address: 请求的远程服务器地址（IP）
+Referrer Policy: （引用策略）用来监管哪些访问来源信息【not IE】
+
+// Request Head
+Accept: 接受类型，浏览器支持的MIME类型（对标服务端放回的Content-Type）
+Accept-Encoding: 浏览器支持的压缩类型，如gzip等，超出类型不能接受
+Content-Type: 客户端发送出去的实体内容的类型
+Cache-Control: 指定请求和响应遵循的缓存机制，如no-cache,no-store
+If-Modified-Since: 对应服务端你的Last-Modified, 用来匹配文件是否变动，只能精确到1s之内，http1.0中
+Expires: 缓存到期时间，（服务端时间）http1.0中
+Max-age: 代表资源在本地缓存多少秒， http 1.1中
+If-None-Match: 对应的服务端的ETag，用来匹配文件内容是否改变（非常精确），http1.1中
+Cookie: 有cookie并且同域访问会自动带上
+Connection: 当浏览器与服务器通信时对于长链接如何进行处理，如keep-alive;
+Host: 请求的服务器URL
+Origin: 最初的请求是从哪里发起的（只会精确到端口）,origin比Referrer更尊重隐私
+Referrer: 该页面的来源URL（适用于所有类型的请求，会精确到详细页面地址，CSRF拦截常用到这个字段）
+User-Agent: 用户客户端的一些必要信息，如UA头部等;
+
+
+// Response Head
+Access-Control-Allow-Headers: 服务端允许的请求的headers
+Access-Control-Allow-Methods: 服务端允许的请求方法
+Access-Control-Allow-Origin: 服务端允许的Origin头部
+Content-Type: 服务端返回的实体内容的类型
+Date: 数据从服务端发送的时间
+Cache-Control: 告诉浏览器或其他客户，什么环境可以安全的缓存文档
+Last-Modified: 请求的资源最后修改时间
+Expires: 文档什么时候过期，从而不再缓存
+Max-age: 客户端的本地资源应该缓存多少秒，开启Cache-Control后有效
+ETag: 请求变量的实体标签的当前值
+Set-Cookie: 设置和页面关联的cookie,服务器通过这个头部把cookie传给客户端
+keep-alive: 如果客户端有keep-alive, 服务端也会有相应（如timeout = 38）
+Server: 服务器的一些相关信息
+</code></pre></div><h3 id="浏览器解析资源渲染页面"><a href="#浏览器解析资源渲染页面" class="header-anchor">#</a> 浏览器解析资源渲染页面</h3> <p>浏览器拿到html和css后会构建一个dom树（深度优先，先构建子树，在构建兄弟树）和css树，在这之中，如果遇到scrpit标签，构建将会停止之后将两棵树合并为一颗渲染树，在浏览器内将渲染树渲染成对应页面</p> <h3 id="浏览器接受数据-关闭tcp连接"><a href="#浏览器接受数据-关闭tcp连接" class="header-anchor">#</a> 浏览器接受数据，关闭tcp连接</h3> <p>服务端返回数据后，浏览器拿到对应数据，之后关闭tcp连接，进行四次挥手，由客户端发起 FIN(client) -&gt; ACK(server) -&gt; FIN(server) -&gt; ACK(client)</p> <p><img src="/CCblog/assets/img/fourhand.c88adc7f.jpg" alt="fourhand"></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/CCblog/http/http.html" class="prev">
+        http解析
+      </a></span> <span class="next"><a href="/CCblog/http/status.html">
+        http状态码
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/CCblog/assets/js/app.860d8657.js" defer></script><script src="/CCblog/assets/js/2.192a28f1.js" defer></script><script src="/CCblog/assets/js/7.53121658.js" defer></script>
+  </body>
+</html>

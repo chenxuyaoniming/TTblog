@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>getDerivedStateFromProps &amp; getSnapshotBeforeUpdate | TTblog</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <script src="https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js"></script>
+    <meta name="description" content="努力！奋斗！">
+    
+    <link rel="preload" href="/CCblog/assets/css/0.styles.44c529a9.css" as="style"><link rel="preload" href="/CCblog/assets/js/app.860d8657.js" as="script"><link rel="preload" href="/CCblog/assets/js/2.192a28f1.js" as="script"><link rel="preload" href="/CCblog/assets/js/24.999861bd.js" as="script"><link rel="prefetch" href="/CCblog/assets/js/10.f4592cfd.js"><link rel="prefetch" href="/CCblog/assets/js/11.f3cd4bd5.js"><link rel="prefetch" href="/CCblog/assets/js/12.4430f43c.js"><link rel="prefetch" href="/CCblog/assets/js/13.65615d70.js"><link rel="prefetch" href="/CCblog/assets/js/14.69fd22b3.js"><link rel="prefetch" href="/CCblog/assets/js/15.cc4e5498.js"><link rel="prefetch" href="/CCblog/assets/js/16.2c78764d.js"><link rel="prefetch" href="/CCblog/assets/js/17.a9a3f30b.js"><link rel="prefetch" href="/CCblog/assets/js/18.fc62dd5f.js"><link rel="prefetch" href="/CCblog/assets/js/19.57688039.js"><link rel="prefetch" href="/CCblog/assets/js/20.9e50bbb4.js"><link rel="prefetch" href="/CCblog/assets/js/21.95e351b9.js"><link rel="prefetch" href="/CCblog/assets/js/22.5656717b.js"><link rel="prefetch" href="/CCblog/assets/js/23.32fc433c.js"><link rel="prefetch" href="/CCblog/assets/js/25.2d3ea345.js"><link rel="prefetch" href="/CCblog/assets/js/26.3bf670f2.js"><link rel="prefetch" href="/CCblog/assets/js/27.284f9e9b.js"><link rel="prefetch" href="/CCblog/assets/js/28.142e3b90.js"><link rel="prefetch" href="/CCblog/assets/js/29.631f43c5.js"><link rel="prefetch" href="/CCblog/assets/js/3.8473ddb1.js"><link rel="prefetch" href="/CCblog/assets/js/30.da36890d.js"><link rel="prefetch" href="/CCblog/assets/js/31.9c521b72.js"><link rel="prefetch" href="/CCblog/assets/js/32.fbd454d8.js"><link rel="prefetch" href="/CCblog/assets/js/33.71913a17.js"><link rel="prefetch" href="/CCblog/assets/js/34.02c70a11.js"><link rel="prefetch" href="/CCblog/assets/js/35.8015ee45.js"><link rel="prefetch" href="/CCblog/assets/js/36.3b466399.js"><link rel="prefetch" href="/CCblog/assets/js/37.4a999360.js"><link rel="prefetch" href="/CCblog/assets/js/4.0235f4a4.js"><link rel="prefetch" href="/CCblog/assets/js/5.cc893d32.js"><link rel="prefetch" href="/CCblog/assets/js/6.063fcb7e.js"><link rel="prefetch" href="/CCblog/assets/js/7.53121658.js"><link rel="prefetch" href="/CCblog/assets/js/8.561f5ee3.js"><link rel="prefetch" href="/CCblog/assets/js/9.a4560938.js">
+    <link rel="stylesheet" href="/CCblog/assets/css/0.styles.44c529a9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/CCblog/" class="home-link router-link-active"><!----> <span class="site-name">TTblog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/CCblog/aboutMe.html" class="nav-link">
+  个人介绍
+</a></div><div class="nav-item"><a href="/CCblog/react/teach.html" class="nav-link">
+  学习
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/CCblog/aboutMe.html" class="nav-link">
+  个人介绍
+</a></div><div class="nav-item"><a href="/CCblog/react/teach.html" class="nav-link">
+  学习
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/CCblog/" aria-current="page" class="sidebar-link">More see More think More money</a></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/http" class="sidebar-heading clickable"><span>HTTP</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/css" class="sidebar-heading clickable"><span>CSS</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/js" class="sidebar-heading clickable"><span>JS</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/react" class="sidebar-heading clickable router-link-active open"><span>React</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/CCblog/react/" aria-current="page" class="sidebar-link">react框架</a></li><li><a href="/CCblog/react/vdom.html" class="sidebar-link">react虚拟dom</a></li><li><a href="/CCblog/react/router.html" class="sidebar-link">react-router</a></li><li><a href="/CCblog/react/setState.html" class="sidebar-link">setState解析</a></li><li><a href="/CCblog/react/getDrived.html" aria-current="page" class="active sidebar-link">getDerivedStateFromProps &amp; getSnapshotBeforeUpdate</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/CCblog/react/optimize.html" class="sidebar-link">react性能优化</a></li><li><a href="/CCblog/react/stack&amp;fiber.html" class="sidebar-link">StackReconciler &amp; FiberReconciler</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/vue" class="sidebar-heading clickable"><span>Vue</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/webpack" class="sidebar-heading clickable"><span>Webpack</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/ts" class="sidebar-heading clickable"><span>TypeScript</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="getderivedstatefromprops-getsnapshotbeforeupdate"><a href="#getderivedstatefromprops-getsnapshotbeforeupdate" class="header-anchor">#</a> getDerivedStateFromProps &amp; getSnapshotBeforeUpdate</h3> <h4 id="getderivedstatefromprops"><a href="#getderivedstatefromprops" class="header-anchor">#</a> getDerivedStateFromProps</h4> <p><font color="red">getDerivedStateFromProps</font>: 在组件初始化和更新后执行，用于获取最新的props和state，因为是个静态方法，所以无法获取this，避免开发者在其内部写过多业务，需要返回一个对象式的值，用于更新state。因此16.3去除了componentWillReceiveProps,
+在 React 16.4 中，任何因素触发的组件更新流程（包括由 this.setState 和 forceUpdate 触发的更新流程）都会触发 getDerivedStateFromProps；</p> <p>而在 v 16.3 版本时，只有父组件的更新会触发该生命周期。</p> <div class="language-js extra-class"><pre class="language-js"><code>
+    <span class="token keyword">class</span> <span class="token class-name">Demo</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+        <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">static</span> <span class="token function">getDerivedStateFromProps</span><span class="token punctuation">(</span><span class="token parameter">props<span class="token punctuation">,</span> state</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 比较props和state</span>
+        
+        <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token operator">...</span>props<span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+</code></pre></div><h4 id="getsnapshotbeforeupdate"><a href="#getsnapshotbeforeupdate" class="header-anchor">#</a> getSnapshotBeforeUpdate</h4> <p><font color="red">getSnapshotBeforeUpdate</font>：和componentDidUpdate联动，需要一个返回值，返回值会作为第三个参数给到 componentDidUpdate。它的执行时机是在 render 方法之后，真实 DOM 更新之前。在这个阶段里，我们可以同时获取到更新前的真实 DOM 和更新前后的 state&amp;props 信息。可以认为这个api替代了componentWillUpdate</p> <div class="language-js extra-class"><pre class="language-js"><code>
+    <span class="token keyword">class</span> <span class="token class-name">Demo</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+        <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 组件更新时调用</span>
+    <span class="token function">getSnapshotBeforeUpdate</span><span class="token punctuation">(</span><span class="token parameter">prevProps<span class="token punctuation">,</span> prevState</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;getSnapshotBeforeUpdate方法执行&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span> <span class="token string">&quot;haha&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 组件更新后调用</span>
+    <span class="token function">componentDidUpdate</span><span class="token punctuation">(</span><span class="token parameter">nextProps<span class="token punctuation">,</span> nextState<span class="token punctuation">,</span> valueFromSnapshot</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;componentDidUpdate方法执行&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;从 getSnapshotBeforeUpdate 获取到的值是&quot;</span><span class="token punctuation">,</span> valueFromSnapshot<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre></div><h4 id="react-16去除的api"><a href="#react-16去除的api" class="header-anchor">#</a> react 16去除的api</h4> <ul><li><p>componentWillMount；</p></li> <li><p>componentWillUpdate；</p></li> <li><p>componentWillReceiveProps。</p></li></ul> <p><img src="evernotecid://431011C7-77FA-41A4-AC68-8E0594FD3029/appyinxiangcom/30251234/ENResource/p1" alt="21bb72521fe815e1141c920c46fc8d7d.png"></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/CCblog/react/setState.html" class="prev">
+        setState解析
+      </a></span> <span class="next"><a href="/CCblog/react/optimize.html">
+        react性能优化
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/CCblog/assets/js/app.860d8657.js" defer></script><script src="/CCblog/assets/js/2.192a28f1.js" defer></script><script src="/CCblog/assets/js/24.999861bd.js" defer></script>
+  </body>
+</html>
