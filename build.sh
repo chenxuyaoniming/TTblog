@@ -18,4 +18,8 @@ git push
 
 echo "上传完成：：："
 
+cp -r ./docs/.vuepress/dist/* ../CCblog/
+
+echo "复制完成：：："
+
 ../CCblog/blog.sh
