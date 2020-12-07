@@ -12,7 +12,9 @@ echo "开始上传:::-----------------------------------------------------------
 
 git add .
 
-git commit -m 'save:::ok'
+read -p '请输入提交内容' content
+
+git commit -m "build-$content"
 
 git push
 
@@ -21,5 +23,3 @@ echo "上传完成：：："
 cp -r ./docs/.vuepress/dist/* ../CCblog/
 
 echo "复制完成：：："
-
-../CCblog/blog.sh
