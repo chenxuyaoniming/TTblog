@@ -62,6 +62,7 @@ class Linked {
                 currentNode = currentNode.next;
                 index --;
             }
+            // 使删除节点的上一级的next 指向 删除节点的下一级（当前current.next）
             lastNode.next = currentNode.next;
         }
         console.log(this.head, 'head')
