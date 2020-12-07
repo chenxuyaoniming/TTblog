@@ -96,12 +96,19 @@ module.exports = {
                 ]
             },
             {
-                title: '算法',
+                title: '数据结构与算法',
                 path: '/alg',
                 children: [
                     '/alg/',
                     '/alg/sort',
                     '/alg/linked'
+                ]
+            },
+            {
+                title: '面试题',
+                path: '/face',
+                children: [
+                    '/face/',
                 ]
             }
         ]
