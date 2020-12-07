@@ -94,6 +94,15 @@ module.exports = {
                     '/ts/',
                     '/ts/generic'
                 ]
+            },
+            {
+                title: '算法',
+                path: '/alg',
+                children: [
+                    '/alg/',
+                    '/alg/sort',
+                    '/alg/linked'
+                ]
             }
         ]
     }
