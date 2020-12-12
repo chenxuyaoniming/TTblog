@@ -67,7 +67,8 @@ module.exports = {
                     '/react/setState',
                     '/react/getDrived',
                     '/react/optimize',
-                    '/react/stack&fiber'
+                    '/react/stack&fiber',
+                    '/react/mobx'
                 ]
             },
             {
@@ -109,6 +110,7 @@ module.exports = {
                 path: '/face',
                 children: [
                     '/face/',
+                    '/face/promise'
                 ]
             }
         ]
