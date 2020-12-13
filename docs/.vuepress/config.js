@@ -112,7 +112,8 @@ module.exports = {
                 path: '/face',
                 children: [
                     '/face/',
-                    '/face/promise'
+                    '/face/promise',
+                    '/face/layout'
                 ]
             }
         ]
