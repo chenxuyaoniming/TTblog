@@ -85,7 +85,9 @@ module.exports = {
                 title: 'Webpack',
                 path: '/webpack',
                 children: [
-                    '/webpack/'
+                    '/webpack/',
+                    '/webpack/loader',
+                    '/webpack/plugin'
                 ]
             },
             {
