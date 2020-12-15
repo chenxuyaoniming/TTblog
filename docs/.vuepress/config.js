@@ -38,6 +38,13 @@ module.exports = {
                 ]
             },
             {
+                title: 'HTML',
+                path: '/html',
+                children: [
+                    '/html'
+                ]
+            },
+            {
                 title: 'CSS',
                 path: '/css',
                 children: [
