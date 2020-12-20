@@ -41,7 +41,8 @@ module.exports = {
                 title: 'HTML',
                 path: '/html',
                 children: [
-                    '/html'
+                    '/html/',
+                    '/html/message'
                 ]
             },
             {
@@ -112,6 +113,14 @@ module.exports = {
                     '/alg/',
                     '/alg/sort',
                     '/alg/linked'
+                ]
+            },{
+                title: '设计模式',
+                path: '/design',
+                children: [
+                    '/design/',
+                    '/design/singleton',
+                    '/design/observer'
                 ]
             },
             {
