@@ -16,4 +16,4 @@
 #### 事件监听 target.addeventListener(type, callback, option = true)
 - type: 监听的事件类型 click,scroll,mousemove
 - callback: 事件触发时执行的回调
-- option：选择事件类型，默认true 为事件捕获， false：事件冒泡
+- option：选择事件类型，默认false 事件在冒泡阶段触发， 设置为true时，事件将会在捕获阶段触发
