@@ -42,7 +42,8 @@ module.exports = {
                 path: '/html',
                 children: [
                     '/html/',
-                    '/html/message'
+                    '/html/message',
+                    '/html/event'
                 ]
             },
             {
@@ -76,7 +77,8 @@ module.exports = {
                     '/react/getDrived',
                     '/react/optimize',
                     '/react/stack&fiber',
-                    '/react/mobx'
+                    '/react/mobx',
+                    '/react/event'
                 ]
             },
             {
