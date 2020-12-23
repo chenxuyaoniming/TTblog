@@ -77,6 +77,7 @@ module.exports = {
                     '/react/getDrived',
                     '/react/optimize',
                     '/react/stack&fiber',
+                    '/react/redux',
                     '/react/mobx',
                     '/react/event'
                 ]
