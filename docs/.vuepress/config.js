@@ -89,7 +89,8 @@ module.exports = {
                     '/vue/',
                     '/vue/composition',
                     '/vue/defineProperty',
-                    '/vue/vueArray'
+                    '/vue/vueArray',
+                    '/vue/vuex'
                 ]
             },
             {
