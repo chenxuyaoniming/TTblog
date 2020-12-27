@@ -15,7 +15,7 @@
     }
     
     static getDerivedStateFromProps(props, state) {
-        // 比较props和state
+        // 比较props和state``````
         
         return {...props}
     }

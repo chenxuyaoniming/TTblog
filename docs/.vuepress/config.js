@@ -74,6 +74,7 @@ module.exports = {
                     '/react/vdom',
                     '/react/router',
                     '/react/setState',
+                    '/react/lifecycle',
                     '/react/getDrived',
                     '/react/optimize',
                     '/react/stack&fiber',
@@ -133,7 +134,8 @@ module.exports = {
                 children: [
                     '/face/',
                     '/face/promise',
-                    '/face/layout'
+                    '/face/layout',
+                    '/face/react'
                 ]
             }
         ]
