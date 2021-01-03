@@ -63,7 +63,8 @@ module.exports = {
                     '/js/array',
                     '/js/prototype',
                     '/js/promise',
-                    '/js/designModal'
+                    '/js/designModal',
+                    '/js/event'
                 ]
             },
             {
