@@ -19,7 +19,7 @@ echo "开始上传github:::-----------------------------------------------------
 
 git add .
 
-read -p '请输入提交内容' content
+read -p '请输入提交内容:' content
 
 git commit -m "build-$content"
 
