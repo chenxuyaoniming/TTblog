@@ -138,7 +138,8 @@ module.exports = {
                     '/face/',
                     '/face/promise',
                     '/face/layout',
-                    '/face/react'
+                    '/face/react',
+                    '/face/call'
                 ]
             }
         ]
