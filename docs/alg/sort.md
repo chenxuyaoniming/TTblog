@@ -63,7 +63,7 @@
             current = arr[i];
             // 将此元素后面的元素视为已排序元素，并依次进行比较
             preIndex = i - 1;
-            // 当已排序的元素大于当前未排序的元素时，替换两者位置
+            // 当已排序的元素大于当前未排序的元素时，替换两者位置,并且回往下继续比较
             while(preIndex >=0 && arr[preIndex] > current) {
                 arr[preIndex+1] = arr[preIndex]
                 nexIndex --;
@@ -97,6 +97,42 @@ function sort(arr) {
         })
         return sort(lowArr).concat(currentArr).concat(sort(heightArr))
     }
+}
+```
+#### 并归排序：
+```js
+function sort(arr) {
+    if (arr.length < 2) {
+        return arr;
+    }
+    const _length = arr.length;
+    const helf = Math.floor(_length/2);
+    const left = sort(arr.slice(0, helf));
+    const right = sort(arr.slice(helf, _length));
+    // 先拆分
+    return margeArr(left, right);
+
+    function margeArr(left, right) {
+        let i = 0;
+        let j = 0;
+
+        let res = [];
+        while(i < left.length && j < right.length) {
+            if (left[i] > right[j]) {
+                res.push(right[j]);
+                j++;
+            } else if (left[i] < right[j]) {
+                res.push(left[i]);
+                i++;
+            } else {
+                res.push(left[i], right[j]);
+                i ++;
+                j ++;
+            }
+        }
+        return res.concat(left.slice(i, left.length)).concat(right.slice(j, right.length))
+    }
+    // 再并归
 }
 ```
 #### 桶排序：
