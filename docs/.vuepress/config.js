@@ -65,7 +65,8 @@ module.exports = {
                     '/js/prototype',
                     '/js/promise',
                     '/js/designModal',
-                    '/js/event'
+                    '/js/event',
+                    '/js/class'
                 ]
             },
             {
@@ -119,7 +120,8 @@ module.exports = {
                 children: [
                     '/alg/',
                     '/alg/sort',
-                    '/alg/linked'
+                    '/alg/linked',
+                    '/alg/hfman'
                 ]
             },{
                 title: '设计模式',
@@ -137,7 +139,8 @@ module.exports = {
                     '/face/',
                     '/face/promise',
                     '/face/layout',
-                    '/face/react'
+                    '/face/react',
+                    '/face/call'
                 ]
             }
         ]

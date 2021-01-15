@@ -104,6 +104,17 @@ promise可以链式调用，then等待上一级状态执行res或err，catch用�
 
     })
 ```
+- **promise.join(...promiseArr, cb)** 当promise队列需要同时执行，但是互相没有关联时使用promise.join
+```js
+    Promise(p1, p2, p3, p4, (p1, p2, p3, p4) => {
+        set({
+            p1,
+            p2,
+            p3,
+            p4
+        })
+    })
+```
 
 [简单的promise实现](./myPromise.md)
 
