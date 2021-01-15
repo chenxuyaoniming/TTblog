@@ -43,7 +43,8 @@ module.exports = {
                 children: [
                     '/html/',
                     '/html/message',
-                    '/html/event'
+                    '/html/event',
+                    '/html/cache'
                 ]
             },
             {
