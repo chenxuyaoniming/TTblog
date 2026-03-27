@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/chenxuyaoniming/TTblog#readme",
   "devDependencies": {
+    "vue": "^2.7.16",
+    "vue-server-renderer": "^2.7.16",
     "vue-template-compiler": "^2.7.16",
     "vuepress": "^1.7.1"
   },
