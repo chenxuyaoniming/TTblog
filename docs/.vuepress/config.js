@@ -146,6 +146,13 @@ module.exports = {
                 children: [
                     '/alg/',
                     '/alg/sort',
+                    '/alg/array',
+                    '/alg/string',
+                    '/alg/linkedList',
+                    '/alg/tree',
+                    '/alg/hash',
+                    '/alg/stack-queue',
+                    '/alg/dp',
                     '/alg/linked',
                     '/alg/hfman'
                 ]
