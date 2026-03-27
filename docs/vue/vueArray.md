@@ -70,3 +70,9 @@ function observeArray() {
     }
 }
 ```
+
+---
+
+#### Vue 3 补充
+
+Vue 3 的响应式基于 **Proxy**，可直接监听数组索引与 `length` 等，**不再依赖**重写 `push/splice` 等变异方法这一套；理解 Vue 2 的数组 hack 仍有助于阅读老项目源码。

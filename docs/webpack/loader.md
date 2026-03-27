@@ -12,7 +12,7 @@
                 test: /\.filetype$/,
                 // 使用的loader
                 use: {
-                    loader: loader.path
+                    loader: loader.path,
                     options: {
                         // loader配置
                     }

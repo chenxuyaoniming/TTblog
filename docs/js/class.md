@@ -26,3 +26,27 @@ class本质是构造函数的语法糖，这种方式让对象原型的写法更
 | 作为函数直接调用 | super() === 父类.prototype.constructor(), this指向的父类的构造函数 |
 | 作为对象调用方法时 | super.say() 相当于调用了 父类的原型对象，super在静态方法中调用时，this直接指向父类 |
 | 作为对象进行赋值时 | super指向实例 |
+
+---
+
+#### 静态方法、私有字段（简要）
+
+```js
+class User {
+  static role = 'guest';
+
+  static create(data) {
+    return new User(data.name);
+  }
+
+  #token; // ES2022 私有字段，仅类内部可访问
+
+  constructor(name) {
+    this.name = name;
+    this.#token = Math.random();
+  }
+}
+```
+
+- **`static`**：挂在构造函数上，通过 `User.create()` 调用，**不在实例原型**上。
+- **`#name`**：真正私有，外部无法通过 `obj.name` 访问；与 TypeScript `private`（仅编译期）不同。

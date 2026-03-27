@@ -122,3 +122,196 @@ function limitFetcher(urlList, limit) {
 ```
 
 
+---
+
+#### Promise.all 思路与实现
+
+**思路：**
+
+- **输入**：Promise 数组（或可迭代对象）。
+- **行为**：所有 Promise **都 resolve** 时，返回结果数组（顺序与输入一致）；**任一 reject** 立刻短路返回 reject 理由。
+- **要点**：计数器记录完成数量；用数组按索引保存结果（保持顺序）；任一失败立刻 reject。
+
+**手写实现：**
+
+```js
+Promise.myAll = function (promises) {
+  return new Promise((resolve, reject) => {
+    if (!Array.isArray(promises)) {
+      return reject(new TypeError('参数必须是数组'));
+    }
+
+    const results = [];
+    let completed = 0;
+    const total = promises.length;
+
+    if (total === 0) {
+      return resolve(results);
+    }
+
+    promises.forEach((promise, index) => {
+      // 兼容非 Promise 值（包装为 Promise）
+      Promise.resolve(promise)
+        .then((value) => {
+          results[index] = value; // 按索引保存，保证顺序
+          completed++;
+          if (completed === total) {
+            resolve(results);
+          }
+        })
+        .catch((err) => {
+          reject(err); // 任一失败立刻 reject
+        });
+    });
+  });
+};
+```
+
+**测试：**
+
+```js
+const p1 = Promise.resolve(1);
+const p2 = new Promise((res) => setTimeout(() => res(2), 100));
+const p3 = Promise.resolve(3);
+
+Promise.myAll([p1, p2, p3]).then((res) => {
+  console.log(res); // [1, 2, 3]（p2 最慢，但结果按顺序）
+});
+
+// 任一失败
+Promise.myAll([p1, Promise.reject('err'), p3])
+  .then((res) => console.log(res))
+  .catch((e) => console.log('捕获:', e)); // 捕获: err
+```
+
+---
+
+#### Promise.allSettled 思路与实现
+
+**思路：**
+
+- **输入**：Promise 数组。
+- **行为**：**等待所有 Promise 都结束**（无论 resolve/reject），返回结果数组；每项是对象 `{ status, value/reason }`。
+- **要点**：**不会短路 reject**；计数器 === total 时 resolve 结果数组。
+
+**手写实现：**
+
+```js
+Promise.myAllSettled = function (promises) {
+  return new Promise((resolve, reject) => {
+    if (!Array.isArray(promises)) {
+      return reject(new TypeError('参数必须是数组'));
+    }
+
+    const results = [];
+    let completed = 0;
+    const total = promises.length;
+
+    if (total === 0) {
+      return resolve(results);
+    }
+
+    promises.forEach((promise, index) => {
+      Promise.resolve(promise)
+        .then((value) => {
+          results[index] = { status: 'fulfilled', value };
+        })
+        .catch((reason) => {
+          results[index] = { status: 'rejected', reason };
+        })
+        .finally(() => {
+          completed++;
+          if (completed === total) {
+            resolve(results);
+          }
+        });
+    });
+  });
+};
+```
+
+**测试：**
+
+```js
+const p1 = Promise.resolve(1);
+const p2 = Promise.reject('error2');
+const p3 = new Promise((res) => setTimeout(() => res(3), 50));
+
+Promise.myAllSettled([p1, p2, p3]).then((res) => {
+  console.log(res);
+  // [
+  //   { status: 'fulfilled', value: 1 },
+  //   { status: 'rejected', reason: 'error2' },
+  //   { status: 'fulfilled', value: 3 }
+  // ]
+});
+```
+
+---
+
+#### Promise.race 思路与实现（补充）
+
+**思路：** 返回**最先**完成的 Promise 结果（无论 resolve/reject）。
+
+```js
+Promise.myRace = function (promises) {
+  return new Promise((resolve, reject) => {
+    if (!Array.isArray(promises)) {
+      return reject(new TypeError('参数必须是数组'));
+    }
+    promises.forEach((promise) => {
+      Promise.resolve(promise).then(resolve).catch(reject);
+    });
+  });
+};
+```
+
+---
+
+#### Promise.any 思路与实现（补充）
+
+**思路：** 任一 **resolve** 立刻返回；**全部 reject** 才返回 **AggregateError**（所有失败原因）。
+
+```js
+Promise.myAny = function (promises) {
+  return new Promise((resolve, reject) => {
+    if (!Array.isArray(promises)) {
+      return reject(new TypeError('参数必须是数组'));
+    }
+
+    const errors = [];
+    let rejected = 0;
+    const total = promises.length;
+
+    if (total === 0) {
+      return reject(new AggregateError([], 'All promises were rejected'));
+    }
+
+    promises.forEach((promise, index) => {
+      Promise.resolve(promise)
+        .then(resolve) // 任一成功立刻 resolve
+        .catch((err) => {
+          errors[index] = err;
+          rejected++;
+          if (rejected === total) {
+            reject(new AggregateError(errors, 'All promises were rejected'));
+          }
+        });
+    });
+  });
+};
+```
+
+---
+
+#### 四种静态方法对比表
+
+| 方法 | 短路条件 | 返回结果 |
+| ---- | -------- | -------- |
+| **Promise.all** | 任一 reject 立刻短路 | 所有成功 → 结果数组；任一失败 → 失败原因 |
+| **Promise.allSettled** | 无短路，等待全部结束 | `[{ status, value/reason }, ...]` |
+| **Promise.race** | 最快的 resolve/reject | 最先完成者的结果 |
+| **Promise.any** | 任一 resolve 立刻返回 | 任一成功 → 结果；全失败 → AggregateError |
+
+---
+

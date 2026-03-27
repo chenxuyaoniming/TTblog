@@ -8,7 +8,7 @@
 - **Array.prototype.slice**
 - **Array.prototype.splice**
 - **Array.prototype.map**
-- **Array.prototype.foreach**
+- **Array.prototype.forEach**
 - **Array.prototype.filter**
 - **Array.prototype.some**
 - **Array.prototype.find**
@@ -16,8 +16,20 @@
 - **Array.prototype.sort**
 - **Array.prototype.reduce**
 
-#### Array.from( string|array|number|lickArray )
-创建一个数组,参数必传，传入number类型返回一个空数组
+#### Array.from(string | array | number | iterable)
+
+创建一个数组；参数必传。注意：单独传入 **number** 不会得到「长度为 n 的数组」，需配合 `Array.from({ length: n })` 等用法。
+
+---
+
+#### 易混点补充
+
+| 方法 | 是否改原数组 | 返回值 |
+| ---- | ------------ | ------ |
+| `map` / `filter` / `slice` | 否（返回新数组） | 新数组 |
+| `splice` / `sort` / `reverse` | **是** | 视方法而定 |
+| `forEach` | 否 | `undefined`（无法用 `break` 跳出） |
+
 ```js
 
     const stringArr = Array.from('123')

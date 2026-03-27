@@ -22,7 +22,7 @@ class myOb {
     addSub(ob) {
         this.subs.push(ob)
     }
-    notity() {
+    notify() {
         this.subs.length && this.subs.forEach(sub => sub.update())
     }
     remove(it) {
@@ -106,3 +106,15 @@ const r2 = new Reader('b', middle);
 const r3 = new Reader('c', middle);
 
 ```
+
+---
+
+#### 观察者 vs 发布订阅（补充）
+
+| 对比 | 观察者模式 | 发布订阅 |
+| ---- | ---------- | -------- |
+| 耦合 | 被观察者直接持有观察者列表 | **调度中心** 解耦发布者与订阅者 |
+| 典型 | 数据变 → 直接 `notify` 订阅者 | `on('event')` / `emit('event')` |
+| 在前端 | Vue 响应式依赖收集与通知 | Node `EventEmitter`、自定义事件总线 |
+
+上图与示例代码为教学演示；生产环境更推荐使用成熟状态管理或框架内置能力，避免全局事件滥用导致调用链难追踪。

@@ -18,15 +18,21 @@ module.exports = {
     themeConfig: {
         nav: [
             {
-                'text':'个人介绍',
+                text: '首页',
+                link: '/'
+            },
+            {
+                text: '个人介绍',
                 link: '/aboutMe'
-            }, {
-                text: '学习',
-                link: 'teach'
+            },
+            {
+                text: '学习路线',
+                link: '/guide/'
             }
         ],
         sidebar: [
             '/',
+            '/guide/',
             {
                 title: 'HTTP',
                 path: '/http',
@@ -64,6 +70,7 @@ module.exports = {
                     '/js/array',
                     '/js/prototype',
                     '/js/promise',
+                    '/js/myPromise',
                     '/js/designModal',
                     '/js/event',
                     '/js/class'
@@ -107,11 +114,30 @@ module.exports = {
                 ]
             },
             {
+                title: 'Vite',
+                path: '/vite',
+                children: [
+                    '/vite/',
+                    '/vite/plugin'
+                ]
+            },
+            {
                 title: 'TypeScript',
                 path: '/ts',
                 children: [
                     '/ts/',
-                    '/ts/generic'
+                    '/ts/generic',
+                    '/ts/create'
+                ]
+            },
+            {
+                title: 'AI 前端应用',
+                path: '/ai',
+                children: [
+                    '/ai/',
+                    '/ai/prompt',
+                    '/ai/rag',
+                    '/ai/langchain'
                 ]
             },
             {
@@ -138,8 +164,13 @@ module.exports = {
                 children: [
                     '/face/',
                     '/face/promise',
+                    '/face/js-core',
+                    '/face/browser',
+                    '/face/security',
                     '/face/layout',
                     '/face/react',
+                    '/face/vue',
+                    '/face/engineering',
                     '/face/call'
                 ]
             }

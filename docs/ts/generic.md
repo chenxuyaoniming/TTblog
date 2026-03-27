@@ -42,7 +42,7 @@
 
     // 将泛型类型传入接口，直接指定泛型类型
     interface GenericFnProps<T> {
-        <T>(arg: T)： T;
+        <T>(arg: T): T;
     }
 
     let myIdentity: GenericFnProps<string> = identity;
