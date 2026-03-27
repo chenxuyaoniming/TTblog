@@ -1,6 +1,6 @@
 
 
-const basePath = process.env.NODE_ENV === 'production' ? '/CCblog/' : '/'
+const basePath = process.env.NODE_ENV === 'production' ? '/TTblog/' : '/'
 
 module.exports = {
     title: 'TTblog',
