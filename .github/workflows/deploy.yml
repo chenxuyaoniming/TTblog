@@ -31,11 +31,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'  # 与本地开发一致
+          node-version: '20'
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm install
+          npm list vue vue-template-compiler vue-server-renderer vuepress
 
       - name: Build VuePress site
         run: |
