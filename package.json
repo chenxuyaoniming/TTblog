@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "NODE_OPTIONS=--openssl-legacy-provider vuepress dev docs",
-    "build": "NODE_ENV=production NODE_OPTIONS=--openssl-legacy-provider vuepress build docs"
+    "build": "NODE_ENV=production NODE_OPTIONS=--openssl-legacy-provider npx vuepress build docs"
   },
   "repository": {
     "type": "git",
